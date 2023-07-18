@@ -1,0 +1,138 @@
+
+
+.loginOuterContainer{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3em;
+    background-color: #9B9ECE;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+.loginRegisterContainer{
+    margin: 1em 0em;
+}
+
+.loginRegisterTitle{
+    font-size: 2rem;
+}
+
+.emailContainer{
+    margin: 1em 0em;
+    display: flex;
+    flex-direction: column;
+}
+
+.passwordContainer{
+    margin: 1em 0em;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginBtnContainer{
+    text-align: center;
+    margin: 1em 0em;
+}
+
+.loginBtn{
+    padding: 1em 2em;
+}
+
+.textContainer{
+    margin: 1em 0em;
+    text-align: center;
+}
+
+.labels{
+  margin: 0.2em 0em;
+}
+
+.inputs{
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 0.35em;
+  outline: none;
+}
+
+.loginBtnContainer{
+  margin-top: 3em;
+}
+
+.loginBtn{
+  padding: 1em 2em;
+  border: none;
+  border-radius: 10px;
+  background-color: #6665DD;
+}
+
+.loginBtn:hover{
+  cursor: pointer;
+}
+
+.loginRegisterContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .custom-checkbox {
+    width: 240px;
+    height: 50px;
+  }
+  .custom-checkbox input#status {
+    display: none;
+  }
+  .custom-checkbox input#status + label {
+    height: 100%;
+    width: 100%;
+  }
+  .custom-checkbox input#status + label > .status-switch {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: grey;
+    color: white;
+    transition: all 0.5s ease;
+    padding: 3px;
+    border-radius: 3px;
+  }
+  .custom-checkbox input#status + label > .status-switch:before, .custom-checkbox input#status + label > .status-switch:after {
+    border-radius: 2px;
+    height: calc(100% - 6px);
+    width: calc(50% - 3px);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  .custom-checkbox input#status + label > .status-switch:before {
+    background-color: #6665DD;
+    color: #FFFFFF;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+    left: 3px;
+    z-index: 10;
+    content: attr(data-unchecked);
+  }
+  .custom-checkbox input#status + label > .status-switch:after {
+    right: 0;
+    content: attr(data-checked);
+  }
+  .custom-checkbox input#status:checked + label > .status-switch {
+    background-color: grey;
+  }
+  .custom-checkbox input#status:checked + label > .status-switch:after {
+    left: 0;
+    content: attr(data-unchecked);
+  }
+  .custom-checkbox input#status:checked + label > .status-switch:before {
+    color: #FFFFFF;
+    left: 50%;
+    content: attr(data-checked);
+  }

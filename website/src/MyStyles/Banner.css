@@ -1,0 +1,58 @@
+
+.hero{
+    display: flex;
+    flex-direction: column;
+}
+
+.bannerContainer{
+    position: relative;
+}
+
+.bannerImg{
+    position: relative;
+    left: 0;
+    right: 0;
+    top:0;
+
+    width: 100%;
+    height: 50vh;
+
+    object-fit: cover;
+
+    -webkit-mask-image: linear-gradient(black,transparent);
+    mask-image: linear-gradient(black,transparent);
+}
+
+.searchBarForm{
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.searchBarContainer{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 0.25em;
+    background-color: #6665DD;
+    color:#ffff;
+    width: 35%;
+}
+
+.searchBar{
+    border:none;
+    outline: none;
+    width: 95%;
+    padding: 0.25em;
+    background-color: #6665DD;
+}
+
+.searchBar::placeholder{
+    color:#ffff;
+}
+
+.searchBtn{
+    border: none;
+    padding: 0.25em;
+    background-color: #6665DD;
+}

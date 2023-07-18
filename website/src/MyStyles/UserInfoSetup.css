@@ -1,0 +1,230 @@
+
+.userInfoSetupTitleContainer{
+    text-align: center;
+    margin: 1em 0em;
+}
+
+.userInfoSetupTitle{
+    font-size: 2rem;
+}
+
+.setupGridContainer{
+    display: flex;
+    justify-content: center;
+    margin: 2em 0em;
+}
+
+.setupGrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 50%;
+}
+
+.alignMiddle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.setUpUserInfoFormDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+
+.setUpUserInfoFormContainers{
+    display: flex;
+    flex-direction: column;
+    margin: 0.25em 0em;
+}
+
+.setUpUserInfoInput{
+    width: 50%;
+    height: 1.5em;
+    border: none;
+    outline: none;
+    padding: 0.2em 0.5em;
+    background-color: #9B9ECE;
+}
+
+.infoContainer{
+    margin: 0em 3em;
+}
+
+.applicationInfoContainer{
+    border-bottom: 2px solid #ffff;;
+}
+
+.applicationInfoTitle{
+    color: #ffff;
+    border-bottom: 2px solid #ffff;
+}
+
+.applicationInfoGrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.resumeContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em 0em;
+}
+
+.coverletterContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em 0em;
+}
+
+.addFileContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3em 0.5em;
+    width: 20%;
+    background-color: #9B9ECE;
+}
+
+.plus{
+    display: flex;
+}
+
+.addfileBtn:hover{
+    cursor: pointer;
+}
+
+.shortDiscContainer{
+    margin-bottom: 1em;
+}
+
+.shortDisc{
+    width: 100%;
+    height: 10em;
+    padding: 0.5em;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: #9B9ECE;
+}
+
+.educationContainer{
+    margin-top: 1em;
+    border-bottom: 2px solid #ffff;;
+}
+
+.educationGrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 1em 0em;
+}
+
+.educationContainers{
+    margin: 0.5em 0em;
+}
+
+.educationInputs{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.25em 0.5em;
+    background-color: #9B9ECE;
+}
+
+.addEducationBtnContainer{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-right: 5em;
+}
+
+.addMoreEdText{
+    margin-right: 0.5em;
+}
+
+.addEducationBtn{
+    border: none;
+    padding: 0.35em;
+    border-radius: 100px;
+    background-color: #9B9ECE;
+}
+
+.addEducationBtn:hover{
+    cursor: pointer;
+}
+
+.dropDown{
+    background-color: #9B9ECE;
+    outline: none;
+    border: none;
+    padding: 0.25em 0.5em;
+}
+
+.lookingsForJobsContainer{
+    margin-top:1em;
+}
+
+.lookingForJobsGrid{
+    margin: 0.35em 0em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.userInfoSetupDoneBtnContainer{
+    margin: 2em 0em;
+}
+
+.userInfoSetupDoneBtn{
+    padding: 0.5em 1.5em;
+    font-size: 1.75rem;
+    border-radius: 10px;
+    color: #ffff;
+    background-color: #9B9ECE;
+}
+
+.userInfoSetupDoneBtn:hover{
+    cursor: pointer;
+}
+
+.uploadHidden{
+    visibility: hidden;
+}
+
+.fileName{
+    display: flex;
+    text-align: left;
+}
+
+.plus:hover{
+    cursor: pointer;
+}
+
+.photoContainer{
+    margin: 1em 0em;
+}
+
+.photo:hover{
+    cursor: pointer;
+}
+
+
+
+.addPhotoContainer{
+    text-align: center;
+}
+
+.circle{
+    width: 250px;
+    height: 250px;
+    background-color: #9B9ECE;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.userPhoto{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+}

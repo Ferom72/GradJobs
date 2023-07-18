@@ -1,0 +1,49 @@
+
+.navContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    padding: 1em 0em;
+}
+
+.webTitleContainer{
+    margin: 0em 3em;
+}
+
+.webTitle{
+    font-size: 2.5rem;
+}
+
+.webTitle:hover{
+    cursor: pointer;
+}
+
+.gridNav{
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    gap:1.5em;
+    margin: 0em 3em;
+}
+
+.flow{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0.2em;
+}
+
+.login{
+    padding: 0.7em 1em;
+    border: none;
+    border-radius: 5em;
+    background-color:#9B9ECE;
+}
+
+.login:hover{
+    cursor: pointer;
+}
+
+.hoverNav:hover{
+    cursor: pointer;
+}
