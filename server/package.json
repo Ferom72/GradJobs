@@ -4,6 +4,10 @@
   "description": "server dependencies",
   "author": "Felipe Romero",
   "main": "server.js",
+  "engines": {
+    "node": "18.16.0",
+    "npm":"9.5.1"
+  },
   "scripts": {
     "devStart": "nodemon server.js"
   },
