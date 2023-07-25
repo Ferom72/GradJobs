@@ -2,6 +2,9 @@
     "jobs":[
         {   
             "id": 1,
+            "pay": "70k-80k",
+            "distance":"Remote",
+            "type": "Internship",
             "jobTitle":"Senior Marketing Strategist",
             "jobDiscription":"You will develop comprehensive marketing plans, conduct market research, and analyze consumer trends. You will collaborate with cross-functional teams to create innovative campaigns, identify target audiences, and optimize marketing efforts.",
             "companyName":"Acme Marketing Solutuions",
@@ -17,6 +20,9 @@
         },
         {
             "id": 2,
+            "pay": "60k-70k",
+            "distance":"10 miles",
+            "type": "Entry level",
             "jobTitle":"Product Development Engineer",
             "jobDiscription":"You will design, prototype, and test cutting-edge products. Collaborate with the engineering team to refine product specifications, conduct feasibility studies, and implement cost-effective manufacturing processes.",
             "companyName":"Innovate Tech",
@@ -31,6 +37,9 @@
         },
         {
             "id": 3,
+            "pay": "90k-100k",            
+            "distance":"Remote",
+            "type": "Full time",
             "jobTitle":"Data Science Analyst",
             "jobDiscription":"You will analyze complex data sets, develop predictive models, and extract actionable insights to drive data-informed decision-making.",
             "companyName":"InfoCorp Analytics",
@@ -47,6 +56,9 @@
         },
         {
             "id": 4,
+            "pay": "90k-100k",
+           "distance":"20 miles",
+            "type": "Full time",
             "jobTitle":"Senior UX Designer",
             "jobDiscription":"You will lead user research, wireframing, and prototyping activities to create intuitive and visually appealing user experiences. Collaborate closely with cross-functional teams to ensure seamless integration of user-centered design principles.",
             "companyName":"DesignHub",
@@ -62,6 +74,9 @@
         },
         {
             "id": 5,
+            "pay": "60k-70k",
+            "distance":"15 miles",
+            "type": "Entry level",
             "jobTitle":"Financial Analyst",
             "jobDiscription":"You will analyze market trends, evaluate investment opportunities, and provide financial recommendations to clients. Conduct thorough financial modeling, risk assessments, and portfolio performance analysis.",
             "companyName":"Capital Investments Inc.",
@@ -77,6 +92,9 @@
         },
         {
             "id": 6,
+            "pay": "70k-80k",
+            "distance":"10 miles",
+            "type":"Full time",
             "jobTitle":"Senior Software Engineering",
             "jobDiscription":"You will design, develop, and deploy scalable software solutions, leveraging the latest technologies and industry best practices. Collaborate with cross-functional teams to ensure the delivery of high-quality code and drive innovation in software development processes.",
             "companyName":"CodeCrafters",
@@ -92,6 +110,9 @@
         },
         {
             "id": 7,
+            "pay": "60k-70k",
+            "distance":"15 miles",
+            "type":"Internship",
             "jobTitle":"Human Resources Manager",
             "jobDiscription":"You will oversee recruitment, employee relations, and performance management processes. Develop and implement HR policies, provide guidance on employee benefits, and ensure compliance with employment laws. ",
             "companyName":"TalentFirst Inc.",
@@ -105,6 +126,9 @@
         },
         {
             "id": 8,
+            "pay": "70k-80k",
+            "distance":"Remote",
+            "type": "Internship",
             "jobTitle":"Operations Coordinator",
             "jobDiscription":" You will manage supply chain logistics, coordinate shipments, and optimize inventory management processes. Collaborate with vendors, oversee order fulfillment, and implement process improvements to enhance operational efficiency.",
             "companyName":"LogisticsPro",
@@ -117,6 +141,195 @@
             "half":true,
             "companyDiscription":" LogisticsPro is a leading logistics and supply chain management company that offers end-to-end solutions, ensuring seamless transportation, warehousing, and distribution for a diverse range of clients.",
             "jobInfoPageAboutTheCompany":"LogisticsPro is a leading logistics solutions provider dedicated to delivering efficient and reliable supply chain management services. With a strong focus on customer satisfaction, we offer comprehensive logistics solutions tailored to meet the unique needs of businesses across various industries. At LogisticsPro, we understand that the success of any business depends on seamless and timely movement of goods and materials. With our extensive experience and expertise in logistics, we strive to optimize supply chain operations, streamline processes, and enhance overall efficiency for our clients. Our team of seasoned professionals combines industry knowledge with cutting-edge technology to provide end-to-end logistics solutions. From warehousing and inventory management to transportation and distribution, we offer a wide range of services designed to meet the demands of today's dynamic business environment."
-        }        
+        },
+        {
+            "id": 9,
+            "pay": "80k-90k",
+            "distance": "Remote",
+            "type": "Full time",
+            "jobTitle": "Software Quality Assurance Engineer",
+            "jobDiscription": "You will be responsible for designing and executing test plans, identifying and reporting defects, and ensuring the quality and reliability of software products. Collaborate with development teams to improve software quality throughout the development lifecycle.",
+            "companyName": "QualityTech Solutions",
+            "reqs": ["Strong knowledge of software testing methodologies, testing tools, and best practices. Experience in both manual and automated testing is preferred.",
+            "Familiarity with bug tracking and test management tools, such as Jira, TestRail, or Bugzilla.",
+            "Ability to create and maintain test cases, test scripts, and test data sets for different types of testing, including functional, regression, and performance testing.",
+            "Understanding of software development processes and the ability to work closely with developers to identify and resolve issues.",
+            "Knowledge of programming languages, such as Java, Python, or JavaScript, can be beneficial for writing automated test scripts."
+            ],
+            "rating": "4",
+            "companyDiscription": "QualityTech Solutions is a reputable software testing and quality assurance company known for providing comprehensive and reliable testing solutions to businesses worldwide.",
+            "jobInfoPageAboutTheCompany": "QualityTech Solutions is a leading software testing and quality assurance company committed to delivering top-notch testing services to our clients. We understand the importance of delivering high-quality software products to meet customer expectations and ensure business success. At QualityTech Solutions, our team of skilled QA engineers and testers work diligently to ensure the reliability, functionality, and security of software applications. We offer a wide range of testing services, including functional testing, performance testing, security testing, and test automation. Our agile approach allows us to adapt to our clients' needs and provide flexible and cost-effective testing solutions. With a focus on continuous improvement, we stay up-to-date with the latest testing methodologies and technologies, enabling us to deliver accurate and efficient testing services for a variety of industries and domains."
+        },
+            
+        {
+            "id": 10,
+            "pay": "75k-85k",
+            "distance": "20 miles",
+            "type": "Full time",
+            "jobTitle": "Business Analyst",
+            "jobDiscription": "You will analyze business processes, gather requirements, and propose solutions to improve operational efficiency and drive business growth. Collaborate with stakeholders to define project scopes, create business models, and conduct feasibility studies.",
+            "companyName": "Strategic Solutions Inc.",
+            "reqs": ["Strong analytical skills and the ability to translate business needs into clear and concise requirements.",
+            "Experience in process modeling and documentation using tools like BPMN (Business Process Model and Notation) or UML (Unified Modeling Language).",
+            "Knowledge of data analysis and visualization tools, such as Excel, Power BI, or Tableau, to derive insights from data and present findings to stakeholders.",
+            "Ability to conduct stakeholder interviews, workshops, and user surveys to elicit requirements and gather feedback.",
+            "Familiarity with agile methodologies and project management tools like Scrum, Kanban, or Trello can be advantageous."
+            ],
+            "rating": "4",
+            "companyDiscription": "Strategic Solutions Inc. is a renowned business consulting firm known for providing strategic guidance and innovative solutions to businesses seeking growth and optimization.",
+            "jobInfoPageAboutTheCompany": "Strategic Solutions Inc. is a leading business consulting firm dedicated to helping organizations thrive in today's dynamic and competitive business landscape. We understand that every business is unique, and we tailor our consulting services to meet the specific needs of our clients. At Strategic Solutions Inc., our team of experienced business analysts and consultants work closely with clients to identify opportunities, address challenges, and drive positive change. We offer a comprehensive range of consulting services, including business process analysis, strategic planning, market research, and technology implementation. Our client-centric approach ensures that our recommendations align with our clients' goals and deliver tangible results. Whether it's streamlining operations, optimizing supply chains, or entering new markets, our expertise and insights empower businesses to make informed decisions and achieve sustainable growth."
+            },
+            
+            {
+            "id": 11,
+            "pay": "80k-90k",
+            "distance": "Remote",
+            "type": "Full time",
+            "jobTitle": "Senior Frontend Developer",
+            "jobDiscription": "You will design and develop responsive and interactive user interfaces for web applications. Collaborate with UX designers and backend developers to implement and optimize frontend features.",
+            "companyName": "WebCrafters",
+            "reqs": ["Strong proficiency in HTML, CSS, and JavaScript, and experience with modern frontend frameworks/libraries such as React, Angular, or Vue.js.",
+            "Knowledge of UI/UX principles and best practices to create visually appealing and user-friendly interfaces.",
+            "Familiarity with version control systems like Git and the ability to work in a collaborative development environment.",
+            "Experience with frontend performance optimization techniques to ensure fast-loading and smooth user experiences.",
+            "Understanding of cross-browser compatibility and responsive design to deliver consistent experiences across different devices."
+            ],
+            "rating": "4",
+            "companyDiscription": "WebCrafters is a leading web development agency that specializes in creating stunning and functional web applications for clients across various industries.",
+            "jobInfoPageAboutTheCompany": "WebCrafters is a cutting-edge web development agency dedicated to delivering exceptional digital experiences for our clients. We understand the critical role that web applications play in today's digital world, and we are passionate about crafting solutions that engage users and drive results. At WebCrafters, our team of talented frontend developers, designers, and user experience experts collaborate to create visually stunning and user-friendly web applications. Our services encompass all stages of web development, from conceptualization and design to development and deployment. We work closely with clients to understand their unique needs and goals, ensuring that our solutions align with their brand identity and business objectives. From e-commerce platforms to complex web applications, we have the expertise and creativity to bring ideas to life and deliver impactful web experiences."
+            },
+            
+            {
+            "id": 12,
+            "pay": "75k-85k",
+            "distance": "10 miles",
+            "type": "Full time",
+            "jobTitle": "Marketing Manager",
+            "jobDiscription": "You will develop and execute marketing strategies to drive brand awareness and lead generation. Oversee marketing campaigns, measure their effectiveness, and optimize marketing efforts based on data-driven insights.",
+            "companyName": "GrowthMasters",
+            "reqs": ["Strong understanding of digital marketing channels, including social media, content marketing, email marketing, SEO, and PPC advertising.",
+            "Experience in managing marketing campaigns and analyzing key performance indicators (KPIs) to evaluate their success.",
+            "Familiarity with marketing automation tools and CRM systems to streamline marketing workflows and track customer interactions.",
+            "Knowledge of marketing analytics platforms, such as Google Analytics or Adobe Analytics, to measure website traffic, user behavior, and conversion rates.",
+            "Ability to stay up-to-date with industry trends and best practices to develop innovative marketing strategies."
+            ],
+            "rating": "3",
+            "companyDiscription": "GrowthMasters is a results-driven marketing agency that empowers businesses to achieve sustainable growth through effective and data-driven marketing strategies.",
+            "jobInfoPageAboutTheCompany": "GrowthMasters is a leading marketing agency dedicated to helping businesses achieve their growth objectives through data-driven and performance-focused marketing solutions. We understand that in today's competitive market, businesses need to stand out and captivate audiences. At GrowthMasters, our team of skilled marketers, analysts, and strategists work together to create and execute effective marketing strategies that drive results. From lead generation and brand awareness to customer retention and engagement, we offer a comprehensive range of marketing services tailored to meet the unique needs of each client. Our client-centric approach ensures that our solutions align with our clients' goals and deliver tangible ROI. We leverage data and analytics to measure and optimize the performance of marketing campaigns continually. Whether it's crafting compelling content, managing social media, or implementing PPC advertising, we have the expertise and passion to help businesses thrive in the digital age."
+            },
+            
+            {
+            "id": 13,
+            "pay": "70k-80k",
+            "distance": "20 miles",
+            "type": "Entry level",
+            "jobTitle": "Network Administrator",
+            "jobDiscription": "You will manage and maintain the organization's network infrastructure, including routers, switches, and firewalls. Troubleshoot network issues, implement security measures, and ensure the smooth operation of the network.",
+            "companyName": "NetWorksPro",
+            "reqs": ["Strong understanding of network protocols and technologies, including TCP/IP, DNS, DHCP, VLANs, and VPN.",
+            "Experience in configuring and troubleshooting network devices, such as routers, switches, firewalls, and access points.",
+            "Knowledge of network security best practices and the ability to implement security measures to protect against cyber threats.",
+            "Familiarity with network monitoring tools to proactively identify and resolve network performance issues.",
+            "Ability to work with cross-functional teams and communicate technical information effectively."
+            ],
+            "rating": "3",
+            "companyDiscription": "NetWorksPro is a reputable IT services company that specializes in providing reliable and secure network solutions to businesses of all sizes.",
+            "jobInfoPageAboutTheCompany": "NetWorksPro is a leading IT services company dedicated to delivering reliable and secure network solutions to businesses seeking seamless connectivity. We understand the critical role that networks play in today's interconnected world, and we are committed to helping businesses build robust and resilient network infrastructures. At NetWorksPro, our team of experienced network administrators and engineers work diligently to optimize network performance, ensure data security, and provide exceptional support. Our services encompass network design and implementation, security assessments, monitoring and management, and IT consulting. We work closely with clients to understand their unique network needs and challenges, ensuring that our solutions align with their business objectives. From small businesses to large enterprises, our expertise and proactive approach allow us to deliver network solutions that meet the demands of today's digital landscape."
+            },
+            
+            {
+            "id": 14,
+            "pay": "85k-95k",
+            "distance": "10 miles",
+            "type": "Aprentiship",
+            "jobTitle": "Senior Data Engineer",
+            "jobDiscription": "You will design and build data pipelines, databases, and data integration solutions. Collaborate with data scientists and analysts to enable data-driven decision-making across the organization.",
+            "companyName": "DataTech Innovations",
+            "reqs": ["Proficiency in programming languages such as Python, Java, or Scala, and experience with data manipulation and analysis libraries.",
+            "In-depth knowledge of data storage technologies, such as relational databases (SQL), NoSQL databases, and data warehouses.",
+            "Experience in building and optimizing data pipelines and ETL (Extract, Transform, Load) processes.",
+            "Familiarity with cloud-based data services and platforms, such as AWS, Azure, or Google Cloud Platform.",
+            "Understanding of big data technologies like Hadoop, Spark, or Kafka is beneficial for managing and processing large-scale data."
+            ],
+            "rating": "4",
+            "companyDiscription": "DataTech Innovations is a pioneering data solutions company that leverages cutting-edge technologies to empower businesses with data-driven insights.",
+            "jobInfoPageAboutTheCompany": "DataTech Innovations is a leading data solutions company dedicated to helping businesses harness the power of data to drive innovation and growth. We understand that data is a valuable asset that can unlock hidden opportunities and provide a competitive edge. At DataTech Innovations, our team of skilled data engineers and scientists work collaboratively to design and implement data solutions that transform raw data into actionable insights. We offer a wide range of data services, including data integration, data warehousing, data analytics, and machine learning. Our expertise spans across multiple industries, including finance, healthcare, retail, and more. From data extraction and processing to advanced analytics and predictive modeling, we deliver data solutions that empower businesses to make data-informed decisions and stay ahead of the competition."
+            },
+            
+            {
+            "id": 15,
+            "pay": "70k-80k",
+            "distance": "Remote",
+            "type": "Internship",
+            "jobTitle": "Content Marketing Specialist",
+            "jobDiscription": "You will create and manage content marketing strategies to attract and engage target audiences. Develop compelling content, such as blog posts, articles, and social media posts, to drive brand awareness and lead generation.",
+            "companyName": "ContentCraft",
+            "reqs": ["Strong writing and editing skills with an understanding of SEO principles to optimize content for search engines.",
+            "Experience in managing content calendars, tracking content performance, and making data-driven content marketing decisions.",
+            "Familiarity with various content distribution channels, including social media, email marketing, and content syndication.",
+            "Ability to work with cross-functional teams, such as designers and marketing managers, to coordinate content campaigns.",
+            "Knowledge of content marketing trends and best practices to develop innovative and relevant content."
+            ],
+            "rating": "4",
+            "companyDiscription": "ContentCraft is a creative content agency known for delivering engaging and impactful content marketing solutions to businesses worldwide.",
+            "jobInfoPageAboutTheCompany": "ContentCraft is a leading content agency dedicated to creating compelling and impactful content marketing strategies for businesses seeking to connect with their audiences. We understand the power of storytelling and the importance of delivering content that resonates with target audiences. At ContentCraft, our team of skilled content creators, marketers, and strategists collaborate to develop and execute content marketing campaigns that drive results. Our services encompass content creation, content strategy, social media marketing, email marketing, and more. We work closely with clients to understand their unique brand voice and objectives, ensuring that our content aligns with their values and resonates with their audience. From startups to established enterprises, our passion for creativity and storytelling allows us to deliver content that leaves a lasting impact on audiences."
+            },
+            
+            {
+            "id": 16,
+            "pay": "80k-90k",
+            "distance": "15 miles",
+            "type": "Full time",
+            "jobTitle": "Cybersecurity Analyst",
+            "jobDiscription": "You will monitor and analyze security threats, conduct vulnerability assessments, and implement security measures to protect the organization's systems and data. Respond to security incidents and recommend improvements to enhance the organization's cybersecurity posture.",
+            "companyName": "CyberShield Solutions",
+            "reqs": ["Strong knowledge of cybersecurity principles, including network security, encryption, authentication, and access controls.",
+            "Experience in using security tools and technologies, such as SIEM (Security Information and Event Management), antivirus software, and firewalls.",
+            "Familiarity with cybersecurity frameworks, such as NIST Cybersecurity Framework or ISO 27001, to guide security practices and compliance.",
+            "Ability to analyze security logs, detect and respond to security incidents, and conduct forensic investigations.",
+            "Understanding of the latest cybersecurity threats and trends to proactively mitigate risks."
+            ],
+            "rating": "5",
+            "companyDiscription": "CyberShield Solutions is a reputable cybersecurity company that offers top-notch security solutions to safeguard businesses from cyber threats.",
+            "jobInfoPageAboutTheCompany": "CyberShield Solutions is a leading cybersecurity company dedicated to providing top-notch security solutions to businesses seeking to safeguard their digital assets. We understand the evolving threat landscape and the importance of proactive cybersecurity measures. At CyberShield Solutions, our team of experienced cybersecurity analysts and experts work tirelessly to protect organizations from cyber threats and ensure data confidentiality and integrity. Our comprehensive cybersecurity services cover risk assessments, security monitoring, incident response, penetration testing, and more. We work closely with clients to understand their unique security needs and challenges, tailoring our solutions to address their specific requirements. From small businesses to large enterprises, our commitment to excellence and customer-centric approach allows us to deliver cybersecurity solutions that instill confidence and trust in our clients."
+            },
+            
+            {
+            "id": 17,
+            "pay": "70k-80k",
+            "distance": "10 miles",
+            "type": "Entry level",
+            "jobTitle": "Quality Assurance Engineer",
+            "jobDiscription": "You will develop and execute test plans, conduct manual and automated testing, and identify software defects. Collaborate with development teams to ensure the delivery of high-quality software products.",
+            "companyName": "QAPro Solutions",
+            "reqs": ["Experience in software testing methodologies, including test planning, test case creation, and defect reporting.",
+            "Knowledge of automated testing tools, such as Selenium, TestNG, or JUnit, to streamline testing processes.",
+            "Familiarity with agile development practices and the ability to work in a fast-paced, collaborative environment.",
+            "Understanding of software development life cycle (SDLC) and the role of QA in each phase.",
+            "Strong attention to detail and analytical skills to identify and report software defects effectively."
+            ],
+            "rating": "4",
+            "companyDiscription": "QAPro Solutions is a reputable software testing company known for delivering comprehensive quality assurance services to businesses worldwide.",
+            "jobInfoPageAboutTheCompany": "QAPro Solutions is a leading software testing company dedicated to providing comprehensive quality assurance services to businesses seeking to deliver flawless software products. We understand the critical role that quality plays in the success of software applications, and we are committed to ensuring that our clients' products meet the highest standards. At QAPro Solutions, our team of skilled quality assurance engineers and testers work diligently to test and validate software products at every stage of development. Our services encompass manual testing, automated testing, performance testing, security testing, and more. We work closely with clients to understand their software testing requirements and challenges, delivering testing solutions that optimize software performance and user experience. From startups to established enterprises, our dedication to excellence and attention to detail allows us to deliver quality assurance services that instill confidence in our clients' software products."
+            },
+            
+            {
+            "id": 18,
+            "pay": "75k-85k",
+            "distance": "Remote",
+            "type": "Full time",
+            "jobTitle": "Business Analyst",
+            "jobDiscription": "You will analyze business processes, gather requirements, and recommend solutions to improve efficiency and productivity. Collaborate with stakeholders to define project scope and ensure successful project delivery.",
+            "companyName": "BizSolutions Consultancy",
+            "reqs": ["Strong analytical skills and the ability to translate business needs into functional requirements.",
+            "Experience in process mapping and workflow analysis to identify process improvements.",
+            "Familiarity with business analysis tools, such as Microsoft Visio or Lucidchart, to create visual representations of processes.",
+            "Ability to communicate effectively with stakeholders, project managers, and development teams.",
+            "Understanding of project management methodologies to support project planning and execution."
+            ],
+            "rating": "4",
+            "companyDiscription": "BizSolutions Consultancy is a reputable business consulting company known for delivering strategic solutions to businesses seeking to optimize operations.",
+            "jobInfoPageAboutTheCompany": "BizSolutions Consultancy is a leading business consulting company dedicated to providing strategic solutions that drive business growth and efficiency. We understand the challenges that businesses face in today's dynamic market and the importance of making data-informed decisions. At BizSolutions Consultancy, our team of experienced business analysts and consultants work closely with clients to identify opportunities, solve complex challenges, and optimize operations. Our comprehensive range of consulting services covers business process improvement, operational efficiency, project management, and more. We work collaboratively with clients to understand their unique business objectives and deliver tailor-made solutions that align with their goals. From startups to established enterprises, our dedication to excellence and problem-solving approach allows us to deliver consulting services that create tangible value for our clients."
+            }       
     ]
 }

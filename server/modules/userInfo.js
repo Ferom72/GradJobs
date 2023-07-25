@@ -1,32 +1,39 @@
-const mongoose = require("mongoose")
-const {Schema} = mongoose
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
+var Image = require("./image");
+var Education = require("./education");
 
 const userInfoSchema = new Schema({
-    image: {
-        data: Buffer,
-        contentType: String
-    },
-    profession: String,
-    address: String,
-    resume: {
-        data: Buffer,
-        contentType: String
-    },
-    coverLetter: {
-        data: Buffer,
-        contentType: String
-    },
-    schoolName: String,
-    startDate: String,
-    endDate: String,
-    highestEdu: String,
-    degree: String,
-    aboutU: String,
-    lookingFor: String,
-    broadArea: String,
-    specializedArea: String,
-    cant: String
-})
+  image: Image.schema,
+  profession: String,
+  address: String,
+  resume: {
+    fieldname: String,
+    originalname: String,
+    encoding: String,
+    mimetype: String,
+    destination: String,
+    filename: String,
+    path: String,
+    size: Number,
+  },
+  coverLetter: {
+    fieldname: String,
+    originalname: String,
+    encoding: String,
+    mimetype: String,
+    destination: String,
+    filename: String,
+    path: String,
+    size: Number,
+  },
+  education: { type: Array, default: [] },
+  aboutU: String,
+  lookingFor: String,
+  broadArea: String,
+  specializedArea: String,
+  cant: String,
+});
 
 const UserInfoModel = mongoose.model("UserInfo", userInfoSchema);
 

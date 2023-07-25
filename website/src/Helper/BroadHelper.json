@@ -1,0 +1,48 @@
+{
+    "BroadArea": [
+        {
+            "id": 1,
+            "subject": "Computer Science"
+        },
+        {
+            "id": 2,
+            "subject": "Computer Engineering"
+        },
+        {
+            "id": 3,
+            "subject": "Electrical Engineering"
+        },
+        {
+            "id": 4,
+            "subject": "Mechanical Engineering"
+        },
+        {
+            "id": 5,
+            "subject": "Civil Engineering"
+        },
+        {
+            "id": 6,
+            "subject": "Aerospace Engineering"
+        },
+        {
+            "id": 7,
+            "subject": "Chemical Engineering"
+        },
+        {
+            "id": 8,
+            "subject": "Biomedical Engineering"
+        },
+        {
+            "id": 9,
+            "subject": "Environmental Engineering"
+        },
+        {
+            "id": 10,
+            "subject": "Industrial Engineering"
+        },
+        {
+            "id": 11,
+            "subject": "Materials Science"
+        }
+    ]
+}

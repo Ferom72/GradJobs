@@ -8,25 +8,28 @@
     position: relative;
 }
 
-.bannerImg{
+.bannerImgWrapper{
     position: relative;
-    left: 0;
-    right: 0;
-    top:0;
-
     width: 100%;
     height: 50vh;
+    overflow: hidden;
+}
 
-    object-fit: cover;
-
-    -webkit-mask-image: linear-gradient(black,transparent);
-    mask-image: linear-gradient(black,transparent);
+.bannerImgHome{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .searchBarForm{
     display: flex;
     justify-content: center;
     z-index: 1;
+    transform: translateY(-50%);
 }
 
 .searchBarContainer{
@@ -42,9 +45,10 @@
 .searchBar{
     border:none;
     outline: none;
-    width: 95%;
-    padding: 0.25em;
+    width: 100%;
+    padding: 0.6em;
     background-color: #6665DD;
+    color: #ffff;
 }
 
 .searchBar::placeholder{
@@ -52,7 +56,13 @@
 }
 
 .searchBtn{
+    align-self: center;
     border: none;
-    padding: 0.25em;
+    margin: 0em 0.5em;
+    padding: 0.4em;
     background-color: #6665DD;
+}
+
+.searchBtn:hover{
+    cursor: pointer;
 }

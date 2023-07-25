@@ -12,6 +12,7 @@
     border: none;
     border-radius: 10px;
     color: #FFFFFF;
+    box-shadow:0 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 .loginRegisterContainer{
@@ -54,6 +55,7 @@
 
 .inputs{
   border: none;
+  background-color: transparent;
   border-radius: 5px;
   padding: 0.5em 0.35em;
   outline: none;
@@ -135,4 +137,23 @@
     color: #FFFFFF;
     left: 50%;
     content: attr(data-checked);
+  }
+
+  .eyeIcon{
+    color: #6665DD;
+    margin: 0em 1em;
+    width: 1.25em;
+    height: 1.25em;
+  }
+
+  .eyeIcon:hover{
+    cursor: pointer;
+  }
+
+  .inputContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background-color: white;
   }

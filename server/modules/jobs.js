@@ -6,6 +6,6 @@ const jobSchema = new Schema({
     applied:Boolean
 })
 
-const MovieModel = mongoose.model("Jobs",jobSchema)
+const JobModel = mongoose.model("Jobs",jobSchema)
 
-module.exports = MovieModel
+module.exports = JobModel

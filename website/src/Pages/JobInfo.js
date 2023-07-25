@@ -1,14 +1,17 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext} from "react";
 import { UserContext } from "../Context/UserContext";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import Nav from "../Components/Nav";
 import data from "../Helper/Helper.json";
-import Img from "../Images/dataAnalyze.jpeg"
+import IMG from "../Images/dataAnalyze.jpeg"
 import "../MyStyles/JobInfo.css";
 import Requisits from "../Components/Requisits";
+import axios from 'axios'
+import { useNavigate } from "react-router-dom";
 
 function JobInfo() {
-  const { job } = useContext(UserContext);
+  const navigate = useNavigate()
+  const { job,user,handleLoginNavStatus} = useContext(UserContext);
   const jobSelected = data?.jobs.find((jobs) => jobs?.id === Number(job));
   const StarContainer = [];
 
@@ -31,6 +34,54 @@ function JobInfo() {
     }
   }
 
+  const HandleAppliedJobs = () =>{
+    let appliedJobs = user?.jobs
+    let matched = false
+
+    appliedJobs?.map((job,index)=>{
+      if(job.jobName === jobSelected?.jobTitle){
+        matched = true
+      }
+    })
+
+    let displayText = matched ? <span className="applyBtn">Applied</span>
+    : <span className="applyBtn" onClick={(e)=>handleApply(e)}>Apply</span>
+
+    return displayText
+  }
+
+
+  const handleApply = async(e)=>{
+    e.preventDefault()
+
+    try{
+
+      const {jobTitle} = jobSelected
+      const usernames = user?.username
+      
+      const jobApplied = {
+          jobName:jobTitle,
+          applied: true
+      }
+
+      const {data} = await axios.put('/addjobs',{
+        usernames,
+        jobApplied
+      })
+
+      if(data.error){
+        console.log(data.error)  
+      }else{
+        handleLoginNavStatus(true)
+        navigate('/')
+      }
+
+    }catch(error){
+      console.log(error.error)
+    }
+
+  }
+
   StarAmount();
 
   return (
@@ -38,7 +89,7 @@ function JobInfo() {
       <Nav/>
       <div className="hero">
         <div className="bannerContainer">
-          <img className="bannerImg" src={Img} alt="bannerPic" />
+          <img className="bannerImg" src={IMG} alt="bannerPic" />
         </div>
       </div>
       <div className="outerContainer">
@@ -79,7 +130,7 @@ function JobInfo() {
               </span>
             </div>
             <div className="applyBtnContainer">
-              <span className="applyBtn">Apply</span>
+              <HandleAppliedJobs/>
             </div>
           </div>
         </div>

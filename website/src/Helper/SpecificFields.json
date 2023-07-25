@@ -1,0 +1,222 @@
+{
+    "Computer Science": [
+        {
+            "id": 1,
+            "subject": "Artificial Intelligence"
+        },
+        {
+            "id": 2,
+            "subject": "Data Science"
+        },
+        {
+            "id": 3,
+            "subject": "Cybersecurity"
+        },
+        {
+            "id": 4,
+            "subject": "Software Engineering"
+        },
+        {
+            "id": 5,
+            "subject": "Computer Graphics"
+        }
+    ],
+    "Computer Engineering": [
+        {
+            "id": 6,
+            "subject": "Embedded Systems"
+        },
+        {
+            "id": 7,
+            "subject": "Digital Systems Design"
+        },
+        {
+            "id": 8,
+            "subject": "Computer Hardware"
+        },
+        {
+            "id": 9,
+            "subject": "Network Engineering"
+        },
+        {
+            "id": 10,
+            "subject": "VLSI Design"
+        }
+    ],
+    "Electrical Engineering": [
+        {
+            "id": 11,
+            "subject": "Power Systems"
+        },
+        {
+            "id": 12,
+            "subject": "Control Systems"
+        },
+        {
+            "id": 13,
+            "subject": "Electronics"
+        },
+        {
+            "id": 14,
+            "subject": "Telecommunications"
+        },
+        {
+            "id": 15,
+            "subject": "Signal Processing"
+        }
+    ],
+    "Mechanical Engineering": [
+        {
+            "id": 16,
+            "subject": "Thermodynamics"
+        },
+        {
+            "id": 17,
+            "subject": "Mechatronics"
+        },
+        {
+            "id": 18,
+            "subject": "Manufacturing Engineering"
+        },
+        {
+            "id": 19,
+            "subject": "Fluid Mechanics"
+        },
+        {
+            "id": 20,
+            "subject": "Robotics"
+        }
+    ],
+    "Civil Engineering": [
+        {
+            "id": 21,
+            "subject": "Structural Engineering"
+        },
+        {
+            "id": 22,
+            "subject": "Transportation Engineering"
+        },
+        {
+            "id": 23,
+            "subject": "Geotechnical Engineering"
+        },
+        {
+            "id": 24,
+            "subject": "Environmental Engineering"
+        },
+        {
+            "id": 25,
+            "subject": "Water Resources Engineering"
+        }
+    ],
+    "Aerospace Engineering": [
+        {
+            "id": 26,
+            "subject": "Aerodynamics"
+        },
+        {
+            "id": 27,
+            "subject": "Flight Mechanics"
+        },
+        {
+            "id": 28,
+            "subject": "Spacecraft Design"
+        },
+        {
+            "id": 29,
+            "subject": "Aircraft Systems"
+        },
+        {
+            "id": 30,
+            "subject": "Astrodynamics"
+        }
+    ],
+    "Chemical Engineering": [
+        {
+            "id": 31,
+            "subject": "Process Design"
+        },
+        {
+            "id": 32,
+            "subject": "Chemical Reactor Engineering"
+        },
+        {
+            "id": 33,
+            "subject": "Polymer Engineering"
+        },
+        {
+            "id": 34,
+            "subject": "Bioprocess Engineering"
+        },
+        {
+            "id": 35,
+            "subject": "Materials Synthesis"
+        }
+    ],
+    "Biomedical Engineering": [
+        {
+            "id": 36,
+            "subject": "Biomechanics"
+        },
+        {
+            "id": 37,
+            "subject": "Medical Imaging"
+        },
+        {
+            "id": 38,
+            "subject": "Biomaterials"
+        },
+        {
+            "id": 39,
+            "subject": "Rehabilitation Engineering"
+        },
+        {
+            "id": 40,
+            "subject": "Bioinstrumentation"
+        }
+    ],
+    "Environmental Engineering": [
+        {
+            "id": 41,
+            "subject": "Air Quality Engineering"
+        },
+        {
+            "id": 42,
+            "subject": "Water and Wastewater Engineering"
+        },
+        {
+            "id": 43,
+            "subject": "Solid Waste Management"
+        },
+        {
+            "id": 44,
+            "subject": "Environmental Impact Assessment"
+        },
+        {
+            "id": 45,
+            "subject": "Sustainable Development"
+        }
+    ],
+    "Materials Science": [
+        {
+            "id": 46,
+            "subject": "Metallurgy"
+        },
+        {
+            "id": 47,
+            "subject": "Ceramic Engineering"
+        },
+        {
+            "id": 48,
+            "subject": "Polymer Science"
+        },
+        {
+            "id": 49,
+            "subject": "Nanomaterials"
+        },
+        {
+            "id": 50,
+            "subject": "Electronic Materials"
+        }
+    ]
+}

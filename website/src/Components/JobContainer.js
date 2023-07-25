@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "../MyStyles/JobContainer.css";
 import { useNavigate,Link } from "react-router-dom";
 import { FaStar, FaStarHalfAlt,FaRegStar } from "react-icons/fa";
+import { UserContext } from "../Context/UserContext";
 
 function JobContainer({jobs,select}) {
-
   const StarContainer = [];
   const navigate = useNavigate()
 

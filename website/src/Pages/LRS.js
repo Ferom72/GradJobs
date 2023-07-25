@@ -40,7 +40,7 @@ function LRS() {
           onClick={() => handleClick()}>
           <div className="custom-checkbox">
             <input id="status" type="checkbox" name="status" />
-            <label for="status">
+            <label htmlFor="status">
               <div
                 className="status-switch"
                 data-unchecked="Login"

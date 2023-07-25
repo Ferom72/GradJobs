@@ -1,0 +1,60 @@
+
+.UserInfoFormContainers{
+    margin: 1em 0em;
+}
+
+.whiteLetter{
+    color: #ffff;
+}
+
+.userInfoTitle{
+    font-size: 2rem;
+}
+
+.resumeContainer{
+    margin: 1em 0em;
+}
+
+.converletterContainer{
+    margin: 1em 0em;
+}
+
+.shortDiscContainer{
+    margin: 1em 0em;
+}
+
+.userAddFileContainer{
+    width: 100%;
+}
+
+.fileImages{
+    margin: 1em 0em;
+    
+}
+
+.docx{
+    width: 10em;
+    height: 10em;
+}
+
+.pdf{
+    width: 9em;
+    height: 9em;
+}
+
+.fileImages:hover{
+    cursor: pointer;
+}
+
+.UserInfoFormDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+
+.UserInfoFromContainers{
+    display: flex;
+    flex-direction: column;
+    margin: 0.25em 0em;
+}

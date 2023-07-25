@@ -4,7 +4,11 @@
 }
 
 body{
-    background-color:#ACADBC ; 
+    background-color:#ACADBC ;    
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 

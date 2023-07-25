@@ -1,0 +1,43 @@
+
+.aboutUsOuterContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.test{
+    display: flex;
+    background-color: #9B9ECE;
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    padding: 5em 1em;
+    color: #FFFFFF;
+    box-shadow:0 0 4px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(25%) ;
+}
+
+.aboutUsGrid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.aboutUsInfoContainers{
+    margin: 1em 0em;
+}
+
+.aboutUsImgCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutUsHeaders{
+    font-size: 1.5em;
+    border-bottom: solid #FFFFFF ;
+}
+
+.infoBodies{
+    margin-top: 1em;
+}

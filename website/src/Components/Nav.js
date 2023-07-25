@@ -6,13 +6,13 @@ import { UserContext } from '../Context/UserContext'
 function Nav() {
 
   const navigate = useNavigate()
-  const {userStatus} = useContext(UserContext)
+  const {user} = useContext(UserContext)
 
   const LoginStatus = () =>{
-    if(!userStatus){
+    if(user === ''){
       return <span className='login' onClick={()=> navigate('/login')}>Login</span>
     }else{
-      return <span className='login'>User Info</span>
+      return <span className='login' onClick={()=>navigate('/userInfo')}>User Info</span>
     } 
   }
 
@@ -23,7 +23,7 @@ function Nav() {
       </div>
       <div className='gridNav'>
         <div className='flow'>
-          <span className='hoverNav'>About Us</span>
+          <span className='hoverNav' onClick={()=>{navigate('/aboutUs')}}>About Us</span>
         </div>
         <div className='flow'>
           <span className='hoverNav'>Language Prefrence</span>

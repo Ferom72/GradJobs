@@ -49,7 +49,8 @@
 }
 
 .infoContainer{
-    margin: 0em 3em;
+    margin: 0em 7em;
+    margin-bottom: 7em;
 }
 
 .applicationInfoContainer{
@@ -106,6 +107,7 @@
     border: none;
     outline: none;
     background-color: #9B9ECE;
+    border-radius: 5px;
 }
 
 .educationContainer{
@@ -116,6 +118,9 @@
 .educationGrid{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    border-radius: 5px;
+    padding: 1em;
+    background-color: #9B9ECE;
     margin: 1em 0em;
 }
 
@@ -128,7 +133,7 @@
     outline: none;
     border-radius: 5px;
     padding: 0.25em 0.5em;
-    background-color: #9B9ECE;
+    background-color: white;
 }
 
 .addEducationBtnContainer{
@@ -177,6 +182,7 @@
 
 .userInfoSetupDoneBtn{
     padding: 0.5em 1.5em;
+    border: none;
     font-size: 1.75rem;
     border-radius: 10px;
     color: #ffff;
@@ -201,16 +207,20 @@
 }
 
 .photoContainer{
-    margin: 1em 0em;
+    margin: 0.1em 0em;
 }
 
 .photo:hover{
     cursor: pointer;
 }
 
-
+.hidden{
+    visibility: hidden;
+}
 
 .addPhotoContainer{
+    display: flex;
+    justify-content: center;
     text-align: center;
 }
 
