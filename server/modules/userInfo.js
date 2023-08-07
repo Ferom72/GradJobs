@@ -5,6 +5,7 @@ var Education = require("./education");
 
 const userInfoSchema = new Schema({
   image: Image.schema,
+  displayImg: String,
   profession: String,
   address: String,
   resume: {

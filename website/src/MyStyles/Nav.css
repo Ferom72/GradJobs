@@ -37,7 +37,12 @@
     padding: 0.7em 1em;
     border: none;
     border-radius: 5em;
+    white-space: nowrap;
     background-color:#9B9ECE;
+}
+
+.hoverNav{
+    white-space: nowrap;
 }
 
 .login:hover{

@@ -92,3 +92,17 @@
 .links{
     text-decoration: none;
 }
+
+.noJobsFoundOuterContainer{
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+
+.noJobsFoundInnerContainer{
+    display: flex;
+}
+
+.noJobsFoundText{
+    font-size: 2rem;
+}

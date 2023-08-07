@@ -1,4 +1,4 @@
-import React, { useContext} from "react";
+import React, { useContext, useState} from "react";
 import { UserContext } from "../Context/UserContext";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import Nav from "../Components/Nav";
@@ -11,8 +11,9 @@ import { useNavigate } from "react-router-dom";
 
 function JobInfo() {
   const navigate = useNavigate()
-  const { job,user,handleLoginNavStatus} = useContext(UserContext);
+  const { job,user,handleLoginNavStatus,userStatus} = useContext(UserContext);
   const jobSelected = data?.jobs.find((jobs) => jobs?.id === Number(job));
+  const [displayError,setDisplayError] = useState(false)
   const StarContainer = [];
 
   function StarAmount() {
@@ -50,36 +51,46 @@ function JobInfo() {
     return displayText
   }
 
-
   const handleApply = async(e)=>{
     e.preventDefault()
 
-    try{
+    if(!userStatus){
+      setDisplayError(!displayError)
+    }else{
+      try{
 
-      const {jobTitle} = jobSelected
-      const usernames = user?.username
-      
-      const jobApplied = {
-          jobName:jobTitle,
-          applied: true
+        const {jobTitle} = jobSelected
+        const usernames = user?.username
+        
+        const jobApplied = {
+            jobName:jobTitle,
+            applied: true
+        }
+  
+        const {data} = await axios.put('/addjobs',{
+          usernames,
+          jobApplied
+        })
+  
+        if(data.error){
+          console.log(data.error)  
+        }else{
+          handleLoginNavStatus(true)
+          navigate('/')
+        }
+  
+      }catch(error){
+        console.log(error.error)
       }
-
-      const {data} = await axios.put('/addjobs',{
-        usernames,
-        jobApplied
-      })
-
-      if(data.error){
-        console.log(data.error)  
-      }else{
-        handleLoginNavStatus(true)
-        navigate('/')
-      }
-
-    }catch(error){
-      console.log(error.error)
     }
+  }
 
+  const ErrorDisplay = () => {
+    return (
+      <div className="errorMessageJobInfo">
+        <span className="message">please make an account before applying. Thank you!</span>
+      </div>
+    )
   }
 
   StarAmount();
@@ -129,8 +140,9 @@ function JobInfo() {
                 {jobSelected?.jobInfoPageAboutTheCompany}
               </span>
             </div>
-            <div className="applyBtnContainer">
+            <div className="applyBtnContainer" >
               <HandleAppliedJobs/>
+              {displayError ? <ErrorDisplay/> : <span></span>}
             </div>
           </div>
         </div>

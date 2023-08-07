@@ -9,7 +9,9 @@ import UserInfoSetup from "./Pages/UserInfoSetup";
 import UserInfo from "./Pages/UserInfo";
 import AboutUs from "./Pages/AboutUs";
 
-axios.defaults.baseURL = 'https://gradjobs-de12a.web.app';
+// 'https://gradjobs-c21eca28524a.herokuapp.com' ||"http://localhost:5000"
+
+axios.defaults.baseURL = 'https://gradjobs-c21eca28524a.herokuapp.com';
 axios.defaults.withCredentials = true;
 
 function App() {
