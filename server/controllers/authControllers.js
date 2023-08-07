@@ -1,6 +1,5 @@
 const User = require("../modules/user");
 const jwt = require("jsonwebtoken");
-const fs = require("fs");
 const { hashPassword, comparePassword } = require("../Helpers/auths");
 
 const register = async (req, res) => {
@@ -13,19 +12,25 @@ const register = async (req, res) => {
       });
     }
 
+    let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+    if(!email) {
+      return res.json({
+        error: "email is required",
+      });
+    }else if (!emailPattern.test(email)) {
+      return res.json({
+        error: "Invalid email format",
+      })
+    }
+
     if (!username) {
       return res.json({
         error: "username is required",
       });
     }
 
-    if (!email) {
-      return res.json({
-        error: "email is required",
-      });
-    }
-
-    if (!password || password.length < 6) {
+    if (!password) {
       return res.json({
         error: "password is required",
       });
@@ -54,6 +59,7 @@ const register = async (req, res) => {
       ],
       aboutUser: {
         image: {},
+        displayImg:"",
         profession: "",
         address: "",
         resume: {
@@ -97,17 +103,15 @@ const loginUser = async (req, res) => {
 
     const user = await User.findOne({ username });
 
-    if (!user) {
+    if(!user) {
       return res.json({
-        error: "Username could not be found",
+        error: "Wrong Username or Password",
       });
     }
 
-    user.aboutUser;
-
     const match = await comparePassword(password, user.password);
 
-    if (match) {
+    if(match){
       jwt.sign(
         {
           id: user.id,
@@ -116,170 +120,21 @@ const loginUser = async (req, res) => {
           email: user.email,
         },
         process.env.JWT_SECRET,
-        {},
+        {
+          expiresIn: "1h"
+        },
         (err, token) => {
           if (err) throw err;
           res.cookie("token", token).json(user);
         }
       );
-    } else if (!match) {
-      res.json({
-        error: "passwords didnt match",
+    } else if (!match){
+      return res.json({
+        error: "Wrong Username or Password",
       });
     }
   } catch (e) {
     console.log(e);
-  }
-};
-
-const addUserInfo = async (req, res) => {
-
-  try {
-    const {
-      username,
-      profession,
-      address,
-      education,
-      aboutU,
-      lookingfor,
-      broadArea,
-      specializedArea,
-      cant,
-    } = req.body;
-
-    let images = '';
-    let resume = '';
-    let coverLetter = '';
-    let imageData = ''
-    let image = {
-      name: "none",
-      img: {
-        data: "",
-        contentType: "image/png",
-      },
-    };
-
-    var length = req?.files?.length
-
-    console.log( req?.files[0])
-    console.log( req?.files[1])
-    console.log( req?.files[2])
-
-
-    if(length > 0){
-      req?.files.map((file)=>{
-          if(file?.fieldname === "image"){
-              console.log("image")
-              images = file
-          }else if(file?.fieldname === "resume"){
-              console.log("resume")
-              resume = file
-          }else if(file?.fieldname === "coverLetter"){
-              console.log("coverLetter")
-              coverLetter = file
-          }
-      })
-
-      if(images !== ''){
-          imageData = fs.readFileSync(
-          `C:/Users/Felipe/Documents/GradJobs/gradjobs/server/routes/uploads/${images?.filename}`,
-          (err, data) => {
-            return data;
-          }
-        );
-  
-         image = {
-          name: images.filename,
-          img: {
-            data: imageData,
-            contentType: "image/png",
-          },
-        };
-      }
-
-      if(resume === ''){
-        resume = {
-          fieldname: "",
-          originalname: "",
-          encoding: "",
-          mimetype: "",
-          destination: "",
-          filename: "",
-          path: "",
-          size: 0,
-        }
-      }
-
-      if(coverLetter === ''){
-        coverLetter = {
-          fieldname: "",
-          originalname: "",
-          encoding: "",
-          mimetype: "",
-          destination: "",
-          filename: "",
-          path: "",
-          size: 0,
-        }
-      } 
-      
-      const newInfo = {
-        image: image,
-        profession: profession,
-        address: address,
-        resume: resume,
-        coverLetter: coverLetter,
-        education: education,
-        aboutU: aboutU,
-        lookingFor: lookingfor,
-        broadArea: broadArea,
-        specializedArea: specializedArea,
-        cant: cant,
-      };
-
-      const result = await User.findOneAndUpdate(
-        { username: username },
-        { $set: { aboutUser: newInfo } }
-      );
-
-      return res.json({result}) 
-    }else{
-
-
-      const none = {
-        fieldname: "",
-        originalname: "",
-        encoding: "",
-        mimetype: "",
-        destination: "",
-        filename: "",
-        path: "",
-        size: 0,
-      }
-
-      const newInfo = {
-        image:image,
-        resume:none,
-        coverLetter:none,
-        profession: profession,
-        address: address,
-        education: education,
-        aboutU: aboutU,
-        lookingFor: lookingfor,
-        broadArea: broadArea,
-        specializedArea: specializedArea,
-        cant: cant,
-      };
-  
-      const result = await User.findOneAndUpdate(
-        { username: username },
-        { $set: { aboutUser: newInfo } }
-      );
-
-      return res.json({result}) 
-    }
-  } catch (e) {
-    console.log(e.error);
   }
 };
 
@@ -317,7 +172,6 @@ const userProfile = async (req, res) => {
   }
 };
 
-
 const appliedJobs = async (req, res) => {
   const { id, movie } = req.body;
 
@@ -337,6 +191,5 @@ module.exports = {
   loginUser,
   appliedJobs,
   userProfile,
-  addUserInfo,
   addjobs,
 };

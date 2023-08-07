@@ -8,9 +8,11 @@ import {FaEyeSlash,FaEye } from "react-icons/fa6";
 function Register() {
 
   const navigate = useNavigate()
-  const {setUser,setUserStatus,handleLoginNavStatus} = useContext(UserContext)
+  const {setUser,handleLoginNavStatus} = useContext(UserContext)
   const [passwordDisplay,setPasswordDisplay] = useState(false)
   const [confpasswordDisplay,setConfPasswordDisplay] = useState(false)
+  const [displayError,setDisplayError] = useState(false)
+  const [errorMessage,setErrorMessage] = useState()
 
   const [register, setRegister] = useState({
     name: "",
@@ -37,7 +39,8 @@ function Register() {
          })
          
          if(data.error){
-          return (<p>{data.error}</p>)
+          setErrorMessage(data.error)
+          setDisplayError(true)
          }else{
           setRegister({})
           setUser(register)
@@ -52,6 +55,14 @@ function Register() {
     }else{
       console.log("password dont match")
     }
+  }
+
+  const ErrorMessage = () =>{
+    return (
+      <div className="errorMessageContainer">
+        <span className="errorMessage">{errorMessage}</span>
+      </div>
+     )
   }
 
   function handlePasswordDisplay(){
@@ -74,8 +85,6 @@ function Register() {
         }
       }
 
-      
-    
       if(passwordDisplay === true){
         return (<FaEye className='eyeIcon' onClick={handlePasswordDisplay}/>)
       }else{  
@@ -94,7 +103,6 @@ function Register() {
         status.type = "password"
       }
     }
-   
   
     if(confpasswordDisplay === true){
       return (<FaEye className='eyeIcon' onClick={handleConfPasswordDisplay}/>)
@@ -103,9 +111,9 @@ function Register() {
     }
   }
 
-
   return (
     <div>
+        {displayError ? <ErrorMessage/> : <span></span>}
           <div className="emailContainer">
             <span className="labels">Name:</span>
             <div className='inputContainer'>

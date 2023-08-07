@@ -26,9 +26,6 @@ function Nav() {
           <span className='hoverNav' onClick={()=>{navigate('/aboutUs')}}>About Us</span>
         </div>
         <div className='flow'>
-          <span className='hoverNav'>Language Prefrence</span>
-        </div>
-        <div className='flow'>
           <LoginStatus/>
         </div>
       </div>

@@ -1,13 +1,15 @@
-import React, { useContext} from "react";
+import React, { useContext, useEffect, useState} from "react";
 import { UserContext } from "../Context/UserContext";
 import "../MyStyles/UserInfo.css";
 import DocxImage from "../Images/docx.png";
 import PDF from "../Images/PDF.png";
+import axios from "axios";
 import UserInfoNav from "../Components/UserInfoNav";
 import DisplayEdicationUserInfo from "../Components/DisplayEdicationUserInfo";
 
 function UserInfo() {
   const {user} = useContext(UserContext)
+  const [image,setImage] = useState(null)
 
   const HandleDocuments = ({ file }) => {
     if (file?.originalname.includes("docx")) {
@@ -19,7 +21,7 @@ function UserInfo() {
 
   const DisplayEducationContainer = () => {
     
-    const educationList = user ? JSON.parse(user?.aboutUser.education) : ""
+    const educationList = user ? JSON?.parse(user?.aboutUser.education) : ""
     const EduListCont = [];
 
     if(educationList !== ""){
@@ -32,7 +34,7 @@ function UserInfo() {
   };
 
   const arrayBufferToBase64 = (buffer) => {
-    let binary = '';
+    let binary = ''
     const bytes = new Uint8Array(buffer);
     const len = bytes.byteLength;
     for (let i = 0; i < len; i++) {
@@ -43,7 +45,7 @@ function UserInfo() {
 
   const HandleImage = () =>{
 
-      const value  = user?.aboutUser?.image?.name
+    const value  = user?.aboutUser?.image?.name
 
       if(value !== 'none'){
         const ImgData = user?.aboutUser?.image?.img?.data?.data
@@ -64,7 +66,6 @@ function UserInfo() {
       }else{
         return <span className="circle"></span>;
       }
-      
   }
 
   return (

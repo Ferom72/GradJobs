@@ -123,5 +123,15 @@
     cursor: pointer;
 }
 
+.errorMessageJobInfo{
+    margin: 2em 0em;
+}
+
+.message{
+    padding: 0.5em;
+    border: solid red;
+    border-radius: 10px;
+    color: red;
+}
 
 

@@ -19,31 +19,30 @@ function UserInfoSetup() {
   const [update, setUpdate] = useState(false);
   const [educationList, setEducationList] = useState([]);
   const [setupUserInfo, setSetUpUserInfo] = useState({
-    image: "",
+    images: {
+      displayImage: "",
+      serverImage:""
+    },
     profession: "",
     address: "",
     resume: "",
     coverLetter: "",
     education: [],
     aboutU: "",
-    lookingFor: "",
     broadArea: "Computer Science",
     specializedArea: "",
     cant: "",
   });
+  const [displayError,setDisplayError] = useState(false)
+  const [errorMessage,setErrorMessage] = useState()
 
   const handleUserSetup = async (e) => {
     e.preventDefault();
 
     try {
       let formData = new FormData();
-
-      if (setupUserInfo?.image !== "") {
-        formData.append("image", setupUserInfo?.image.serverImage);
-      } else {
-        formData.append("image", setupUserInfo?.image);
-      }
-
+      formData.append("displayImage", setupUserInfo?.images.displayImage);
+      formData.append("serverImage", setupUserInfo?.images.serverImage);
       educationList.push(educationData);
       formData.append("username", user?.username);
       formData.append("profession", setupUserInfo?.profession);
@@ -52,7 +51,6 @@ function UserInfoSetup() {
       formData.append("coverLetter", setupUserInfo?.coverLetter);
       formData.append("education", JSON.stringify(educationList));
       formData.append("aboutU", setupUserInfo?.aboutU);
-      formData.append("lookingFor", setupUserInfo?.lookingFor);
       formData.append("broadArea", setupUserInfo?.broadArea);
       formData.append("specializedArea", setupUserInfo?.specializedArea);
       formData.append("cant", setupUserInfo?.cant);
@@ -64,12 +62,14 @@ function UserInfoSetup() {
       });
 
       if (data.error) {
-        console.log("error");
+        setDisplayError(true)
+        setErrorMessage(data.error)
       } else {
         navigate("/");
       }
+
     } catch (e) {
-      console.log(e.error);
+      console.log(e);
     }
   };
 
@@ -77,14 +77,14 @@ function UserInfoSetup() {
     setUpdate(!update);
   }
 
-  function handlePhoto(e) {
-    setSetUpUserInfo({
-      ...setupUserInfo,
-      image: {
-        serverImage: e.target.files[0],
-        displayImage: URL.createObjectURL(e.target.files[0]),
-      },
-    });
+  function handlePhoto(){
+
+    let value = document.getElementById("userPhoto")
+
+    setSetUpUserInfo({...setupUserInfo,images:{
+      serverImage: value.files[0],
+      displayImage: URL.createObjectURL(value.files[0])
+    }})
   }
 
   function handleResume(e) {
@@ -147,13 +147,13 @@ function UserInfoSetup() {
   };
 
   const ImageDisplay = () => {
-    if (setupUserInfo.image === "") {
+    if (setupUserInfo?.images.displayImage === "") {
       return <span className="circle"></span>;
     } else {
       return (
         <img
           className="userPhoto"
-          src={setupUserInfo?.image.displayImage}
+          src={setupUserInfo?.images.displayImage}
           alt="user photo"
         />
       );
@@ -183,12 +183,21 @@ function UserInfoSetup() {
     return areaCont;
   };
 
+  const ErrorMessage = () =>{
+    return (
+     <div className="errorMessageContainer">
+       <span className="errorMessage">{errorMessage}</span>
+     </div>
+    )
+ }
+
   return (
     <div className="">
       <LRNav />
       <div className="userInfoSetupTitleContainer">
         <span className="userInfoSetupTitle">Lets get setup</span>
       </div>
+      {displayError ? <ErrorMessage/> : <span></span>}
       <form onSubmit={(e) => handleUserSetup(e)}>
         <div className="setupGridContainer">
           <div className="setupGrid">
@@ -199,7 +208,7 @@ function UserInfoSetup() {
                 </div>
                 <div className="addPhotoContainer">
                   <div>
-                    <input id="userPhoto" type="file" className="hidden" onChange={handlePhoto} />
+                    <input id="userPhoto" name="images" type="file" className="hidden" onChange={handlePhoto} />
                     <label htmlFor="userPhoto" className="addPhotoText">
                       <div className="photoContainer">
                         <span className="photo">Add Photo</span>

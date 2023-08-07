@@ -82,17 +82,21 @@
     align-items: center;
     font-family: Helvetica, Arial, sans-serif;
   }
+
   .custom-checkbox {
     width: 240px;
     height: 50px;
   }
+
   .custom-checkbox input#status {
     display: none;
   }
+
   .custom-checkbox input#status + label {
     height: 100%;
     width: 100%;
   }
+
   .custom-checkbox input#status + label > .status-switch {
     cursor: pointer;
     width: 100%;
@@ -104,6 +108,7 @@
     padding: 3px;
     border-radius: 3px;
   }
+
   .custom-checkbox input#status + label > .status-switch:before, .custom-checkbox input#status + label > .status-switch:after {
     border-radius: 2px;
     height: calc(100% - 6px);
@@ -114,6 +119,7 @@
     justify-content: center;
     transition: all 0.3s ease;
   }
+
   .custom-checkbox input#status + label > .status-switch:before {
     background-color: #6665DD;
     color: #FFFFFF;
@@ -122,17 +128,21 @@
     z-index: 10;
     content: attr(data-unchecked);
   }
+
   .custom-checkbox input#status + label > .status-switch:after {
     right: 0;
     content: attr(data-checked);
   }
+
   .custom-checkbox input#status:checked + label > .status-switch {
     background-color: grey;
   }
+
   .custom-checkbox input#status:checked + label > .status-switch:after {
     left: 0;
     content: attr(data-unchecked);
   }
+
   .custom-checkbox input#status:checked + label > .status-switch:before {
     color: #FFFFFF;
     left: 50%;
@@ -156,4 +166,16 @@
     align-items: center;
     border-radius: 5px;
     background-color: white;
+  }
+
+  .errorMessageContainer{
+    border: solid;
+    border-radius: 10px;
+    border-color: red;
+    margin: 0.5em 0em;
+    padding: 1em;
+  }
+
+  .errorMessage{
+    color:red;
   }

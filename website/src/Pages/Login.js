@@ -9,6 +9,8 @@ function Login() {
   const navigate = useNavigate();
   const { handleLoginNavStatus, setUser } = useContext(UserContext);
   const [display, setDisplay] = useState(false);
+  const [displayError,setDisplayError] = useState(false)
+  const [errorMessage,setErrorMessage] = useState()
 
   const [login, setLogin] = useState({
     username: "",
@@ -24,7 +26,8 @@ function Login() {
       const { data } = await axios.post("/login", { username, password });
 
       if (data.error) {
-        return console.log(data.error);
+        setErrorMessage(data.error)
+        setDisplayError(true)
       } else {
         setLogin({});
         setUser(login);
@@ -58,8 +61,18 @@ function Login() {
     }
   };
 
+  
+  const ErrorMessage = () =>{
+    return (
+     <div className="errorMessageContainer">
+       <span className="errorMessage">{errorMessage}</span>
+     </div>
+    )
+ }
+
   return (
     <div className="loginRegisterOut">
+      {displayError ? <ErrorMessage/> : <span></span>}
       <div className="emailContainer">
         <span className="labels">UserName:</span>
         <div className="inputContainer">

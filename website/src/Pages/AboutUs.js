@@ -16,7 +16,8 @@ function AboutUs() {
             <div>
               <div>
                 <div className="aboutUsInfoContainers">
-                  <p>
+                  <span className="aboutUsHeaders">About Us</span>
+                  <p className="infoBodies">
                     Welcome to GradJobs, your ultimate destination for launching
                     a successful career journey. At GradJobs, we understand the
                     unique challenges that graduates face when entering the job

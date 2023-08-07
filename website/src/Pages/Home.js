@@ -5,9 +5,10 @@ import JobsFilter from "../Components/JobsFilter";
 import JobContainer from "../Components/JobContainer";
 import jsondata from "../Helper/Helper.json";
 import { UserContext } from "../Context/UserContext";
+import "../MyStyles/JobContainer.css";
 
 function Home() {
-  const { search, setJob, jobfilters } = useContext(UserContext);
+  const { search, setJob, jobfilters } = useContext(UserContext)
 
   let jobSelection = (job) => {
     setJob(job);
@@ -32,16 +33,26 @@ function Home() {
 
     data = jobfilters.length == 0 ? data : filterJobs(data, jobfilters);
 
-    return data?.map((item) => (
-      <JobContainer key={item.id} jobs={item} select={jobSelection} />
-    ));
+    if(data.length === 0){
+      return(
+        <div className="noJobsFoundOuterContainer">
+          <div className="noJobsFoundInnerContainer">
+            <span className="noJobsFoundText">No jobs found meeting your requirments</span>
+          </div>
+        </div>
+      )
+    }else{
+      return data?.map((item) => (
+        <JobContainer key={item.id} jobs={item} select={jobSelection} />
+      ));
+    }    
   };
 
   return (
     <div>
-      <Nav />
-      <Banner />
-      <JobsFilter />
+      <Nav/>
+      <Banner/>
+      <JobsFilter/>
       <JobList />
     </div>
   );
